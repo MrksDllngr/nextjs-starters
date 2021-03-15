@@ -15,6 +15,6 @@ export default function Home() {
 
       <Title  >hello</Title>
 
-  )test
+  )
 }
 
