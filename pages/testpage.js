@@ -22,7 +22,7 @@ const {content, preview} = props;
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
 
   const content = await fetchTestContent(preview);
 
