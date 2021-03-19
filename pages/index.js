@@ -17,6 +17,7 @@ const {content, preview} = props;
   return (
     <Layout preview={preview}>
       <Title >{content[0].text}</Title>
+      <p>testing automation‚</p>
     </Layout>
   );
 }
@@ -24,8 +25,7 @@ const {content, preview} = props;
 export async function getStaticProps({ preview = false }) {
 
   const content = await fetchTestContent(preview);
-  console.log(content);
-
+ 
   return {
     props: { content: content, preview: preview },
   };
