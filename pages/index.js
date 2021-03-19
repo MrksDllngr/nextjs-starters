@@ -24,8 +24,7 @@ const {content, preview} = props;
 export async function getStaticProps({ preview = false }) {
 
   const content = await fetchTestContent(preview);
-  console.log(content);
-
+ 
   return {
     props: { content: content, preview: preview },
   };
