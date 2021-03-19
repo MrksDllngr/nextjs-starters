@@ -18,6 +18,7 @@ const {content, preview} = props;
     <Layout preview={preview}>
       <Title >{content[0].text}</Title>
       <p>testing automation‚</p>
+      <p>webhook test</p>
     </Layout>
   );
 }
