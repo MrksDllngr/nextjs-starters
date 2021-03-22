@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fetchTestContent } from "../helpers/helpers";
+import { fetchContent } from "../helpers/helpers";
 import Layout from "../components/LayoutComponents/Layout";
 
 
@@ -24,7 +24,7 @@ const {content, preview} = props;
 
 export async function getStaticProps({ preview = false }) {
 
-  const content = await fetchTestContent(preview);
+  const content = await fetchContent("tests", preview);
 
   return {
     props: { content: content, preview: preview },
