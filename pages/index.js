@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fetchTestContent } from "../helpers/helpers";
+import { fetchContent } from "../helpers/helpers";
 import Layout from "../components/LayoutComponents/Layout";
 
 
@@ -16,8 +16,14 @@ const {content, preview} = props;
 
   return (
     <Layout preview={preview}>
-      <Title >{content[0].text}</Title>
-    </Layout>
+    <Title>Hallo</Title>
+
+    {content.map((item) => (
+      <div key={item.id}>
+        <p>{item.Langtext}</p>
+      </div>
+    ))}
+  </Layout>
   );
 }
 
